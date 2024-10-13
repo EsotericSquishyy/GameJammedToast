@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://bruc1nx2jjy4k"]
+
+[ext_resource type="Script" path="res://scripts/Main.gd" id="1_o0puh"]
+[ext_resource type="Script" path="res://scripts/Cam.gd" id="2_tl01y"]
+[ext_resource type="PackedScene" uid="uid://bg51tinsmynat" path="res://scenes/Tilemap.tscn" id="3_pqha0"]
+[ext_resource type="PackedScene" uid="uid://bw1ejdi0mu6rn" path="res://scenes/Enemy.tscn" id="4_wpo5l"]
+[ext_resource type="PackedScene" uid="uid://dllsfv6fi3mma" path="res://scenes/Player.tscn" id="5_k6kib"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_o0puh")
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("tilemap")]
+script = ExtResource("2_tl01y")
+tilemap = NodePath("../Tilemap")
+
+[node name="Tilemap" parent="." instance=ExtResource("3_pqha0")]
+position = Vector2(0, 0)
+
+[node name="Enemy" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_wpo5l")]
+z_index = 2
+position = Vector2(40, 112)
+collision_mask = 1
+player = NodePath("../Player")
+
+[node name="Player" parent="." instance=ExtResource("5_k6kib")]
+position = Vector2(128, 64)
+collision_mask = 1

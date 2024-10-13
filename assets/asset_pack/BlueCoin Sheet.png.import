@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgyc2el6a62gj"
-path="res://.godot/imported/BlueCoin Sheet.png-815bb4b4a0169eed5b904f8a501c1f3e.ctex"
+path="res://.godot/imported/BlueCoin Sheet.png-00f0653c3206b74c6636202778272951.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://main/assets/asset_pack/BlueCoin Sheet.png"
-dest_files=["res://.godot/imported/BlueCoin Sheet.png-815bb4b4a0169eed5b904f8a501c1f3e.ctex"]
+source_file="res://assets/asset_pack/BlueCoin Sheet.png"
+dest_files=["res://.godot/imported/BlueCoin Sheet.png-00f0653c3206b74c6636202778272951.ctex"]
 
 [params]
 

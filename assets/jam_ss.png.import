@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj7gixq6dkk0b"
-path="res://.godot/imported/Set 1.png-65a5b44ad795e5d19544225bbc3258f8.ctex"
+uid="uid://bsrwnix6h5nwx"
+path="res://.godot/imported/jam_ss.png-18e8337d57675892d94ca9e00af1ffaf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/asset_pack/Set 1.png"
-dest_files=["res://.godot/imported/Set 1.png-65a5b44ad795e5d19544225bbc3258f8.ctex"]
+source_file="res://assets/jam_ss.png"
+dest_files=["res://.godot/imported/jam_ss.png-18e8337d57675892d94ca9e00af1ffaf.ctex"]
 
 [params]
 
