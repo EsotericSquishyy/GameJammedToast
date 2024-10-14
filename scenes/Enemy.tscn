@@ -1,30 +1,34 @@
-[gd_scene load_steps=4 format=3 uid="uid://bw1ejdi0mu6rn"]
+[gd_scene load_steps=5 format=3 uid="uid://bw1ejdi0mu6rn"]
 
 [ext_resource type="Script" path="res://scripts/Enemy.gd" id="1_8pvvl"]
-[ext_resource type="Texture2D" uid="uid://bpg74uu0h5q37" path="res://icon.svg" id="1_cqy8u"]
+[ext_resource type="Texture2D" uid="uid://dac3vjldlubg2" path="res://assets/unjammed.png" id="2_t1bqc"]
+[ext_resource type="Texture2D" uid="uid://bsgjpn28r0r32" path="res://assets/jammed.png" id="3_s2u5i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uf251"]
 radius = 6.08276
 
 [node name="Enemy" type="CharacterBody2D"]
-collision_layer = 2
-collision_mask = 3
+z_index = 3
+collision_layer = 6
+collision_mask = 5
 motion_mode = 1
 wall_min_slide_angle = 0.0
 script = ExtResource("1_8pvvl")
+unjammed_texture = ExtResource("2_t1bqc")
+jammed_texture = ExtResource("3_s2u5i")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_cqy8u")
+texture = ExtResource("2_t1bqc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_uf251")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+navigation_layers = 3
 debug_enabled = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

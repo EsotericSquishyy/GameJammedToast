@@ -1,5 +1,24 @@
-[gd_scene format=3 uid="uid://bes0vp57scel3"]
+[gd_scene load_steps=4 format=3 uid="uid://bes0vp57scel3"]
+
+[ext_resource type="Texture2D" uid="uid://bsrwnix6h5nwx" path="res://assets/jam_ss.png" id="1_l7w6x"]
+[ext_resource type="Script" path="res://scripts/GameJam.gd" id="1_thjls"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dgrqa"]
+radius = 7.0
 
 [node name="GameJam" type="Node2D"]
+script = ExtResource("1_thjls")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_l7w6x")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_dgrqa")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
