@@ -9,14 +9,9 @@ Don't get eaten by the evil toast. Legend has it that once jammed with the legen
 - `Enter` to start game
 
 ### To-Do
-- Dropping jam
-- Jammed functionality
-- Score
-- Menu/Pause Menu
+- Pause Menu
 - Graphics for
     - Player (animation?)
-    - Toast (Jammed/Unjammed)
 - Completion of rooms?
-    - Fix camera for larger rooms
     - More levels
 - Boost short time after eating
